@@ -8,4 +8,10 @@
    Author URI: http://sadeco.ir
    License: GPL2
    */
+   
+   // funct.'s for wp admin area 
+   // funct.'s for wp post area (add a NEW BOX below all...)
+   // funct.'s for wp after-payline area
+   // db files
+   
 ?>
