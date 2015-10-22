@@ -54,7 +54,7 @@ function labishop_meta_box_callback( $post ) {
 	echo '</label> ';
 	echo '<input type="text" id="labishop_itemname" name="labishop_itemname" value="' . esc_attr( $value ) . '" size="50" />';
 	
-	echo '<label for="labishop_price">';
+	echo '<label for="labishop_price"><br>';
 	_e( 'قیمت کالا (تومان)', 'labishop_textdomain' );
 	echo '</label> ';
 	echo '<input type="text" id="labishop_price" name="labishop_price" value="' . esc_attr( $value ) . '" size="50" />';
