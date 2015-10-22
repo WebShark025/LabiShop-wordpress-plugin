@@ -50,7 +50,7 @@ function labishop_meta_box_callback( $post ) {
 	_e( 'توسط این قسمت, کالای خود را به مشتریان عرضه کنید', 'labishop_textdomain' );
 	echo '</label> ';
 	echo '<label for="labishop_itemname">';
-	_e( 'نام کالا, 'labishop_textdomain' );
+	_e( 'نام کالا', 'labishop_textdomain' );
 	echo '</label> ';
 	echo '<input type="text" id="labishop_itemname" name="labishop_itemname" value="' . esc_attr( $value ) . '" size="50" />';
 	
