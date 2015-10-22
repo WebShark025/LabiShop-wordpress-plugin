@@ -104,7 +104,7 @@ function labishop_save_meta_box_data( $post_id ) {
 	$my_data = sanitize_text_field( $_POST['labishop_new_field'] );
 
 	// Update the meta field in the database.
-	update_post_meta( $post_id, '_my_meta_value_key', $my_data );
+	update_post_meta( $post_id, 'ls_item_inf', $my_data );
 }
 add_action( 'save_post', 'labishop_save_meta_box_data' );
 
