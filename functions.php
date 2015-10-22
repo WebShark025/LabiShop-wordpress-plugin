@@ -48,14 +48,14 @@ function labishop_meta_box_callback( $post ) {
 
 	echo '<label for="labishop_new_field">';
 	_e( 'توسط این قسمت, کالای خود را به مشتریان عرضه کنید', 'labishop_textdomain' );
-	echo '</label> ';
+	echo '</label> <br>';
 	echo '<label for="labishop_itemname">';
 	_e( 'نام کالا', 'labishop_textdomain' );
 	echo '</label> ';
 	echo '<input type="text" id="labishop_itemname" name="labishop_itemname" value="' . esc_attr( $value ) . '" size="50" />';
 	
 	echo '<label for="labishop_price">';
-	_e( 'قیمت کالا (تومان)ا', 'labishop_textdomain' );
+	_e( 'قیمت کالا (تومان)', 'labishop_textdomain' );
 	echo '</label> ';
 	echo '<input type="text" id="labishop_price" name="labishop_price" value="' . esc_attr( $value ) . '" size="50" />';
 }
