@@ -44,7 +44,7 @@ function labishop_meta_box_callback( $post ) {
 	 * Use get_post_meta() to retrieve an existing value
 	 * from the database and use the value for the form.
 	 */
-	$value = get_post_meta( $post->ID, '_my_meta_value_key', true );
+	$value = get_post_meta( $post->ID, 'ls_item_inf', true );
 
 	echo '<label for="labishop_new_field">';
 	_e( 'توسط این قسمت, کالای خود را به مشتریان عرضه کنید', 'labishop_textdomain' );
