@@ -109,15 +109,28 @@ function labishop_save_meta_box_data( $post_id ) {
 	}
 
 	// Sanitize user input.
-	$my_data = sanitize_text_field( $_POST['labishop_new_field'] );
+	$ls_itemname = sanitize_text_field( $_POST['labishop_itemname'] );
+	$ls_price = sanitize_text_field( $_POST['labishop_price'] );
 
 	// Update the meta field in the database.
-	update_post_meta( $post_id, 'ls_item_inf', $my_data );
+	update_post_meta( $post_id, 'ls_itemname', $ls_itemname);
+	update_post_meta( $post_id, 'ls_price', $ls_price);
 }
 add_action( 'save_post', 'labishop_save_meta_box_data' );
 
 
    // funct.'s for wp post area (add a NEW BOX below all...)
+   
+   add_filter ('the_content', 'ls_addcont');
+
+   function ls_addcont($content) {
+   	$get_itemname = get_post_meta( get_the_ID(), 'ls_itemname', true );
+   	$get_price = get_post_meta( get_the_ID(), 'ls_price', true );
+	$content .= 'Stuff to add after content';
+	return $content;
+   }
+
+
    // funct.'s for wp after-payline area
    // db files
    
