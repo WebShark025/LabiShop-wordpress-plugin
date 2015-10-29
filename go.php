@@ -1,0 +1,6 @@
+<?php
+
+// UPLOAD THIS FILE TO THE ROOT DIRECTORY !!!!
+
+
+?>
