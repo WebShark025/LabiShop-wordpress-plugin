@@ -8,6 +8,14 @@
    Author URI: http://sadeco.ir
    License: GPL2
    */
+
+$API_KEY = "82398-583eb-d2655-6344d-3b1eabb8a0f94705a4e91eb2a184";
+$GO_URL = "http://cafe.labishop.com";
+
+// do not edit
+
+$GO_URL .= "/go.php";
+
    
    // funct.'s for wp admin area 
    
@@ -129,7 +137,6 @@ add_action( 'save_post', 'labishop_save_meta_box_data' );
 	$content .= 'Stuff to add after content';
 	return $content;
    }
-
 
    // funct.'s for wp after-payline area
    // db files
