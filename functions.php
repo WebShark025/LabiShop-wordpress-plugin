@@ -134,7 +134,7 @@ add_action( 'save_post', 'labishop_save_meta_box_data' );
    function ls_addcont($content) {
    	$get_itemname = get_post_meta( get_the_ID(), 'ls_itemname', true );
    	$get_price = get_post_meta( get_the_ID(), 'ls_price', true );
-	$content .= include ('form.html');
+	$content .= include ('form.php');
 	return $content;
    }
 
