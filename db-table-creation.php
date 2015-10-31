@@ -1,5 +1,5 @@
 <?php
-CREATE DB :
+//CREATE DB :
 
 $servername = "localhost";
 $username = "labishop_dbb";
@@ -18,6 +18,7 @@ $sql = "CREATE TABLE Orders (
 id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY, 
 itemname VARCHAR(150) NOT NULL,
 fullname VARCHAR(150) NOT NULL,
+price VARCHAR (85) NOT NULL,
 isdone VARCHAR(150) NOT NULL,
 get_id VARCHAR(150) NOT NULL,
 address VARCHAR(300) NOT NULL,
