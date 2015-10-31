@@ -84,17 +84,17 @@ inja matlab hast
 <div class="kharidbox">
 	<font size="6.5" color="#6f9f36" face="BYekan"> کادر خرید</font>
 	<font size="4" color="#6f9f36" face="BYekan"> 
-	<br><br>نام محصول  <input style="margin-right: 50px;margin-left: 50px;width:250px;" placeholder="غیر قابل تغییر" type="text" name="short_link" placeholder="" class="textbox">
-	 قیمت کالا  <input style="margin-right: 23px;" placeholder="غیر قابل تغییر" type="text" name="short_link" placeholder="" class="textbox">
+	<br><br>نام محصول  <input style="margin-right: 50px;margin-left: 50px;width:250px;" placeholder="غیر قابل تغییر" type="text" name="itemname" placeholder="" class="textbox" disabled>
+	 قیمت کالا  <input style="margin-right: 23px;" placeholder="غیر قابل تغییر" type="number" name="price" placeholder="" class="textbox" disabled>
 
 
 	<div style="margin-top:20px;">
-	نام و نام خانوادگی  <input style="margin-right: 5px;margin-left: 50px;width:250px;" placeholder="اجباری" type="text" name="short_link" placeholder="" class="textbox">
-	 شماره تماس  <input style="margin-right: 5px;" type="text" placeholder="اجباری" name="short_link" placeholder="" class="textbox">
+	نام و نام خانوادگی  <input style="margin-right: 5px;margin-left: 50px;width:250px;" placeholder="اجباری" type="text" name="fullname" class="textbox">
+	 شماره تماس  <input style="margin-right: 5px;" type="text" placeholder="اجباری" name="phone" placeholder="" class="textbox">
 	</div>
 
 	<div style="margin-top:20px;">
-	 آدرس دقیق  <input style="margin-right: 42px;width:695px;" type="textarea" placeholder="اجباری" name="short_link" placeholder="" class="textbox">
+	 آدرس دقیق  <input style="margin-right: 42px;width:695px;" type="textarea" placeholder="اجباری" name="address" placeholder="" class="textbox">
 	</div>
 
 	<div style="margin-top:20px;">
