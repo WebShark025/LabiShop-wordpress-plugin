@@ -22,6 +22,7 @@ price VARCHAR (85) NOT NULL,
 isdone VARCHAR(150) NOT NULL,
 get_id VARCHAR(150) NOT NULL,
 address VARCHAR(300) NOT NULL,
+phone VARCHAR(17) NOT NULL,
 reg_date TIMESTAMP
 )";
 
