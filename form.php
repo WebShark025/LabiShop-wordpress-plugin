@@ -1,10 +1,8 @@
-<!DOCTYPE>
-
-<html lang="fa_IR" dir="rtl">
-<head>
-<meta charset="utf-8" />
 <style type="text/css">
 
+#main {
+		position: relative;
+}
 .kharidbox{
 	position: absolute;
 	bottom: 0px;
@@ -107,7 +105,3 @@ inja matlab hast
 </div>
 
 
-
-
-</body>
-</html>
