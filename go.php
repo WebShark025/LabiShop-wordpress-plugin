@@ -32,7 +32,7 @@ curl_setopt($ch,CURLOPT_POSTFIELDS,"api=$api&amount=$amount&redirect=$redirect")
  $fullname = $_POST['fullname'];
  $price = $_POST['price'];
  $address = $_POST['address'];
- 
+ $phone = $_POST['phone'];
  
  
  
@@ -49,8 +49,8 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 } 
 
-$sql = "INSERT INTO Orders (itemname, fullname, price, isdone, get_id, address)
-VALUES ('$itemname', '$fullname', '$price', 'false', '$result', '$address')";
+$sql = "INSERT INTO Orders (itemname, fullname, price, isdone, get_id, address, phone)
+VALUES ('$itemname', '$fullname', '$price', 'false', '$result', '$address', '$phone')";
 
 if ($conn->query($sql) === TRUE) {
     echo "New record created successfully";
