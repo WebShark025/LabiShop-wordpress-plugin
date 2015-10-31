@@ -28,19 +28,51 @@ curl_setopt($ch,CURLOPT_POSTFIELDS,"api=$api&amount=$amount&redirect=$redirect")
  
  
  
+ $itemname = $_POST['itemname'];
+ $fullname = $_POST['fullname'];
+ $price = $_POST['price'];
+ $address = $_POST['address'];
  
  
  
  
+ 
+$servername = "localhost";
+$username = "sibwayir_db";
+$password = "ario2282!!@#$%^&*(Parantez)";
+$dbname = "sibwayir_db";
+
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+} 
+
+$sql = "INSERT INTO Orders (itemname, fullname, price, isdone, get_id, address)
+VALUES ('$itemname', '$fullname', '$price', 'false', '$result', '$address')";
+
+if ($conn->query($sql) === TRUE) {
+    echo "New record created successfully";
+} else {
+    echo "Error: " . $sql . "<br>" . $conn->error;
+}
   $url = $_POST['url'];
   $api = $_POST['api'];
-  $amount = $_POST['amount'];
+  $amount = $_POST['price'];
   $redirect = $_POST['redirect'];
   $result = send($url,$api,$amount,$redirect);
   if($result > 0 && is_numeric($result)){
-  $go = "http://payline.ir/payment/gateway-$result";
-   header("Location: $go");
-  }
+ $go = "http://payline.ir/payment/gateway-$result";
+ header("Location: $go");
+ } else {
+    header("Location: http://www.labishop.com");
+    die;
+ }
+$conn->close();
+
+
+
 
 
 ?>
