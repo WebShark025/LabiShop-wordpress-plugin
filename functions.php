@@ -52,7 +52,8 @@ function labishop_meta_box_callback( $post ) {
 	 * Use get_post_meta() to retrieve an existing value
 	 * from the database and use the value for the form.
 	 */
-	$value = get_post_meta( $post->ID, 'ls_item_inf', true );
+	$value = get_post_meta( $post->ID, 'ls_itemname', true );
+	$value2 = get_post_meta( $post->ID, 'ls_price', true );
 
 	echo '<label for="labishop_new_field">';
 	_e( 'توسط این قسمت, کالای خود را به مشتریان عرضه کنید', 'labishop_textdomain' );
@@ -65,7 +66,7 @@ function labishop_meta_box_callback( $post ) {
 	echo '<label for="labishop_price"><br>';
 	_e( 'قیمت کالا (تومان)', 'labishop_textdomain' );
 	echo '</label> ';
-	echo '<input type="text" id="labishop_price" name="labishop_price" value="' . esc_attr( $value ) . '" size="50" />';
+	echo '<input type="text" id="labishop_price" name="labishop_price" value="' . esc_attr( $value2 ) . '" size="50" />';
 }
 
 /**
