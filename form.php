@@ -4,7 +4,7 @@
 		position: relative;
 }
 .kharidbox{
-	position: absolute;
+	position: relative;
 	bottom: 0px;
 	background-color: #eeffda;
 	border-top: solid #89d139 4px;
