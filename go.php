@@ -1,5 +1,5 @@
 <?php
-
+include ("config-new.php");
 // UPLOAD THIS FILE TO THE ROOT DIRECTORY !!!!
 
  function send($url,$api,$amount,$redirect){
