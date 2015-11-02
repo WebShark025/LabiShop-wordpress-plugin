@@ -135,6 +135,28 @@ add_action( 'save_post', 'labishop_save_meta_box_data' );
    	$get_itemname = get_post_meta( get_the_ID(), 'ls_itemname', true );
    	$get_price = get_post_meta( get_the_ID(), 'ls_price', true );
 	$content .= include ('form.php');
+	$content .= '<div class="kharidbox">
+	<font size="6.5" color="#6f9f36" face="BYekan"> کادر خرید</font>
+	<font size="4" color="#6f9f36" face="BYekan"> 
+	<br><br>نام محصول  <input style="margin-right: 50px;margin-left: 50px;width:250px;" placeholder="غیر قابل تغییر" type="text" name="itemname" value="'.$get_itemname.'" class="textbox" disabled>
+	 قیمت کالا  <input style="margin-right: 23px;" placeholder="غیر قابل تغییر" type="number" name="price" value="'.$get_price.'" class="textbox" disabled>
+
+
+	<div style="margin-top:20px;">
+	نام و نام خانوادگی  <input style="margin-right: 5px;margin-left: 50px;width:250px;" placeholder="اجباری" type="text" name="fullname" class="textbox">
+	 شماره تماس  <input style="margin-right: 5px;" type="text" placeholder="اجباری" name="phone" placeholder="" class="textbox">
+	</div>
+
+	<div style="margin-top:20px;">
+	 آدرس دقیق  <input style="margin-right: 42px;width:695px;" type="textarea" placeholder="اجباری" name="address" placeholder="" class="textbox">
+	</div>
+
+	<div style="margin-top:20px;">
+	 توضیحات اضافه:  <div style="margin-top:10px;"><textarea style="width:820px;max-width:820px;height: 125px;max-height: 125px;"  rows="5" type="textarea" placeholder="اختیاری" name="short_link" placeholder="" class="textbox"></textarea></div>
+	</div>
+	<center><input type="submit" class="btns" value="پرداخت"></center>
+	</font>
+</div>';
 	return $content;
    }
 
