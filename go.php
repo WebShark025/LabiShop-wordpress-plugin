@@ -37,13 +37,9 @@ curl_setopt($ch,CURLOPT_POSTFIELDS,"api=$api&amount=$amount&redirect=$redirect")
  
  
  
-$servername = "localhost";
-$username = "sibwayir_db";
-$password = "ario2282!!@#$%^&*(Parantez)";
-$dbname = "sibwayir_db";
 
 // Create connection
-$conn = new mysqli($servername, $username, $password, $dbname);
+$conn = new mysqli($DATABASE_HOST, $DATABASE_USERNAME, $DATABASE_USER_PASSWORD, $DATABASE_DBNAME);
 // Check connection
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
@@ -57,11 +53,8 @@ if ($conn->query($sql) === TRUE) {
 } else {
     echo "Error: " . $sql . "<br>" . $conn->error;
 }
-  $url = $_POST['url'];
-  $api = $_POST['api'];
   $amount = $_POST['price'];
-  $redirect = $_POST['redirect'];
-  $result = send($url,$api,$amount,$redirect);
+  $result = send("http://payline.ir/payment/gateway-send",$API_KEY,$amount,$GET_URL);
   if($result > 0 && is_numeric($result)){
  $go = "http://payline.ir/payment/gateway-$result";
  header("Location: $go");
